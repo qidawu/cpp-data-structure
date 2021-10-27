@@ -1,0 +1,7 @@
+workspace.code-workspace
+.DS_Store
+/.metadata/
+*.out
+*.out.dSYM
+*/*.out
+*/*.out.dSYM
