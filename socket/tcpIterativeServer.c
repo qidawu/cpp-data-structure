@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -42,6 +43,7 @@ int main(int argc, char **argv)
       printf("%s", "String received from and resent to the connection: ");
       puts(buf);
       send(connfd, buf, n, 0);
+      memset(buf, '\0', sizeof(buf));
     }
 
     if (n < 0)
