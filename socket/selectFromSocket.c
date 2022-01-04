@@ -250,7 +250,8 @@ int main(void)
                   /* Data was received                          */
                   /**********************************************/
                   len = rc;
-                  printf("  %d bytes received\n", len);
+                  printf("  %d bytes received: ", len);
+                  puts(buffer);
 
                   /**********************************************/
                   /* Echo the data back to the client           */
@@ -263,6 +264,7 @@ int main(void)
                      break;
                   }
 
+                  memset(buffer, '\0', sizeof(buffer));
                } while (TRUE);
 
                /*************************************************/
